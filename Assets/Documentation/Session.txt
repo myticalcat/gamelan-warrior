@@ -1,0 +1,23 @@
+Session = Sesi Permainan -> Berdasarkan pada satu objek Beatmap
+Note = Circle yang diteken2
+
+NCode (NotesCode)
+Kumpulan note yang ada dalam satu beatmap. 1 line = 1 note
+
+Tap:
+- type: Jenis (Tap/Hold) -> Tap
+- startTime: Waktu muncul (dalam milisecond)
+- affinity: Black/White
+- key: 0..KeyCount - 1
+
+> format:
+<type>-<startTime>-<affinity>
+> contoh:
+tap-1000-black
+
+
+Hold:
+- type -> Hold
+- startTime
+- endTime
+- affinity

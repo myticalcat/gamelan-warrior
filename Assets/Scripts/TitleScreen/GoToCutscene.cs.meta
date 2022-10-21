@@ -1,0 +1,13 @@
+fileFormatVersion: 2
+guid: 4d22b059595d2bd4b841faa9e739d53f
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - _cutscene: {instanceID: 0}
+  - _dataTransferPrefab: {fileID: 8170285404304590898, guid: a1d7549884a4929468d1f28fd30b4a41, type: 3}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

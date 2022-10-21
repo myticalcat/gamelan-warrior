@@ -1,0 +1,439 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f1f805092b3233a44b7ad9a92324e497, type: 3}
+  m_Name: RhythmSong
+  m_EditorClassIdentifier: 
+  Name: Rhythm Song
+  Difficulty: 1
+  Speed: 5
+  Audio: {fileID: 8300000, guid: 4b2eb7af0b37f8e4b8805ddff162c3e6, type: 3}
+  Background: {fileID: 21300000, guid: fdbcafa4b3e60544a966da9c4b19af7f, type: 3}
+  KeyCount: 6
+  Code: 'tap-0-light-0
+
+    tap-880-light-2
+
+    tap-1320-dark-1
+
+    tap-1760-light-1
+
+    tap-2200-dark-5
+
+    tap-3080-dark-5
+
+    tap-3520-dark-2
+
+    tap-4410-dark-0
+
+    tap-4740-dark-5
+
+    tap-5180-light-5
+
+    tap-5730-dark-4
+
+    tap-6170-light-3
+
+    tap-6610-dark-4
+
+    tap-7050-light-5
+
+    tap-7500-light-2
+
+    tap-8270-light-5
+
+    tap-8710-light-5
+
+    tap-10140-dark-0
+
+    tap-10580-dark-1
+
+    tap-11020-light-1
+
+    tap-11470-dark-0
+
+    tap-11910-dark-3
+
+    tap-12350-light-2
+
+    tap-12790-light-5
+
+    tap-13230-light-1
+
+    tap-13670-light-5
+
+    tap-14110-light-0
+
+    tap-15440-dark-0
+
+    tap-16320-light-1
+
+    tap-16540-light-1
+
+    tap-16760-dark-0
+
+    tap-17200-dark-1
+
+    tap-17640-light-1
+
+    tap-17860-dark-4
+
+    tap-18520-light-0
+
+    tap-18970-light-4
+
+    tap-19190-light-4
+
+    tap-20730-light-3
+
+    tap-21610-dark-1
+
+    tap-22050-light-3
+
+    tap-22500-dark-4
+
+    tap-22940-light-2
+
+    tap-23380-light-4
+
+    tap-24260-light-0
+
+    tap-24700-light-2
+
+    tap-25580-dark-4
+
+    tap-26020-light-2
+
+    tap-26470-light-5
+
+    tap-26910-light-5
+
+    tap-27350-dark-5
+
+    tap-27790-light-4
+
+    tap-28230-dark-3
+
+    tap-28670-light-1
+
+    tap-29550-light-1
+
+    tap-30000-light-4
+
+    tap-31320-light-4
+
+    tap-31760-light-1
+
+    tap-32200-dark-1
+
+    tap-32640-light-4
+
+    tap-33080-light-0
+
+    tap-33750-dark-1
+
+    tap-33970-dark-0
+
+    tap-34850-dark-2
+
+    tap-35070-light-2
+
+    tap-35290-light-1
+
+    tap-35730-dark-5
+
+    tap-36170-light-0
+
+    tap-36610-dark-5
+
+    tap-37050-light-1
+
+    tap-37500-dark-0
+
+    tap-37940-dark-2
+
+    tap-38380-light-2
+
+    tap-38820-light-2
+
+    tap-39260-dark-3
+
+    tap-39810-light-0
+
+    tap-40580-dark-0
+
+    tap-41020-light-3
+
+    tap-42790-light-0
+
+    tap-43230-dark-1
+
+    tap-43670-light-1
+
+    tap-44110-light-2
+
+    tap-45440-light-3
+
+    tap-45880-light-5
+
+    tap-46320-dark-3
+
+    tap-46760-dark-3
+
+    tap-48080-dark-2
+
+    tap-48520-light-2
+
+    tap-48970-light-2
+
+    tap-49410-light-5
+
+    tap-50730-dark-3
+
+    tap-51170-light-3
+
+    tap-51610-light-0
+
+    tap-52050-dark-0
+
+    tap-53600-light-2
+
+    tap-54260-light-0
+
+    tap-54480-light-4
+
+    tap-56020-dark-3
+
+    tap-56250-dark-0
+
+    tap-56470-light-2
+
+    tap-56910-light-5
+
+    tap-57130-light-1
+
+    tap-57570-dark-1
+
+    tap-57790-dark-3
+
+    tap-58230-light-4
+
+    tap-59060-light-5
+
+    tap-60890-dark-3
+
+    tap-61300-dark-0
+
+    tap-61710-light-0
+
+    tap-62120-dark-2
+
+    tap-62940-dark-2
+
+    tap-63350-dark-4
+
+    tap-64170-light-1
+
+    tap-64480-light-0
+
+    tap-64890-dark-0
+
+    tap-65410-dark-1
+
+    tap-65820-light-1
+
+    tap-66230-dark-5
+
+    tap-66640-dark-5
+
+    tap-67050-dark-5
+
+    tap-67770-light-5
+
+    tap-68180-dark-0
+
+    tap-69520-light-0
+
+    tap-69930-light-0
+
+    tap-70340-light-1
+
+    tap-70750-dark-0
+
+    tap-71160-dark-5
+
+    tap-71570-dark-3
+
+    tap-71980-light-0
+
+    tap-72390-dark-1
+
+    tap-72800-dark-5
+
+    tap-73210-light-2
+
+    tap-74450-dark-1
+
+    tap-75270-dark-5
+
+    tap-75470-light-3
+
+    tap-75680-light-3
+
+    tap-76090-light-0
+
+    tap-76500-dark-4
+
+    tap-76710-dark-0
+
+    tap-77320-light-5
+
+    tap-77740-dark-0
+
+    tap-77940-dark-3
+
+    tap-79380-light-2
+
+    tap-80200-light-1
+
+    tap-80610-dark-2
+
+    tap-81020-dark-4
+
+    tap-81430-light-0
+
+    tap-81840-light-2
+
+    tap-82260-dark-1
+
+    tap-82670-dark-1
+
+    tap-83080-dark-2
+
+    tap-83900-dark-5
+
+    tap-84310-light-0
+
+    tap-84720-light-2
+
+    tap-85130-dark-4
+
+    tap-85540-light-4
+
+    tap-85950-light-0
+
+    tap-86370-light-3
+
+    tap-86780-dark-4
+
+    tap-87600-dark-2
+
+    tap-88010-dark-1
+
+    tap-89240-light-1
+
+    tap-89650-dark-5
+
+    tap-90060-light-2
+
+    tap-90470-light-0
+
+    tap-90890-dark-1
+
+    tap-91500-dark-3
+
+    tap-91710-light-1
+
+    tap-92530-light-3
+
+    tap-92740-light-4
+
+    tap-92940-dark-2
+
+    tap-93350-light-5
+
+    tap-93760-light-5
+
+    tap-94170-dark-0
+
+    tap-94580-dark-0
+
+    tap-95000-dark-0
+
+    tap-95410-dark-5
+
+    tap-95820-dark-2
+
+    tap-96230-dark-0
+
+    tap-96640-light-0
+
+    tap-97150-light-2
+
+    tap-97670-light-2
+
+    tap-98280-dark-3
+
+    tap-99930-light-5
+
+    tap-100340-dark-4
+
+    tap-100750-dark-2
+
+    tap-101160-dark-0
+
+    tap-102390-dark-0
+
+    tap-102800-dark-0
+
+    tap-103210-light-2
+
+    tap-103630-dark-4
+
+    tap-104860-light-3
+
+    tap-105270-light-1
+
+    tap-105680-dark-1
+
+    tap-106090-dark-1
+
+    tap-107320-dark-3
+
+    tap-107740-light-3
+
+    tap-108150-light-1
+
+    tap-108560-dark-4
+
+    tap-110000-dark-4
+
+    tap-110820-dark-5
+
+    tap-111230-dark-1
+
+    tap-112460-dark-1
+
+    tap-112870-dark-0
+
+    tap-113280-light-2
+
+    tap-114110-light-1
+
+    tap-114620-dark-2
+
+    tap-115340-dark-3
+
+    tap-115750-dark-3
+
+    tap-116370-light-0
+
+    tap-117600-dark-5'
