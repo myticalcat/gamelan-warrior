@@ -1,0 +1,27 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f1f805092b3233a44b7ad9a92324e497, type: 3}
+  m_Name: Gamelan
+  m_EditorClassIdentifier: 
+  Name: Gamelan
+  Difficulty: 1
+  Speed: 1
+  Audio: {fileID: 8300000, guid: 842df2cd8a359bb448014f9d3f8c8927, type: 3}
+  Background: {fileID: 21300000, guid: da0df1c9c3d9ae7469408a95a1171f36, type: 3}
+  KeyCount: 4
+  Code: 'tap-0-dark-0
+
+    tap-880-light-1
+
+    tap-1760-light-0
+
+    tap-3520-dark-3'
