@@ -13,11 +13,11 @@ MonoBehaviour:
   m_Name: Gamelan
   m_EditorClassIdentifier: 
   Name: Gamelan
-  Difficulty: 1
-  Speed: 1
+  Difficulty: 100
+  Speed: 4
   Audio: {fileID: 8300000, guid: 842df2cd8a359bb448014f9d3f8c8927, type: 3}
   Background: {fileID: 21300000, guid: da0df1c9c3d9ae7469408a95a1171f36, type: 3}
-  KeyCount: 4
+  KeyCount: 6
   Code: 'tap-0-dark-0
 
     tap-880-light-1

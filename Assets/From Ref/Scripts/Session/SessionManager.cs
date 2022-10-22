@@ -16,10 +16,8 @@ namespace Game.Session {
         public Transform NotesParent;
         public Transform Line;
         public AudioSource AudioSourceComponent;
-        public GameObject NoteLightPrefab; // TODO: make it one prefab
-        public GameObject NoteDarkPrefab;
+        public GameObject notePrefab; // TODO: make it one prefab
         public LoadingUI LoadingScript;
-        // public BackgroundUI BackgroundScript;
         public SpriteRenderer _backgroundRenderer;
         public SFXManager _sfxManager;
         
@@ -63,7 +61,7 @@ namespace Game.Session {
                 EndSession(false);
             }
             CheckBalanceScaleFail();
-            CheckMissFail();
+            //CheckMissFail();
         }
         
         // Session Status Methods
@@ -82,10 +80,8 @@ namespace Game.Session {
             // TODO: implement object pooling
             for (int i = 0; i < _notes.Length; i++) {
                 GameObject currentNote;
-                if (_notes[i].Affinity == NoteAffinity.Light)
-                    currentNote = Instantiate(NoteLightPrefab, NotesParent);
-                else
-                    currentNote = Instantiate(NoteDarkPrefab, NotesParent);
+                currentNote = Instantiate(notePrefab, NotesParent);
+        
                 
                 NoteHandler noteHandler = currentNote.GetComponent<NoteHandler>();
                 noteHandler.Initialize(this, _notes[i], Line.position.x + SessionUtils.KeyIndexToHorizontalPosition(_notes[i].Key));
@@ -99,7 +95,7 @@ namespace Game.Session {
             if (!_isLoaded) throw new Exception("Session is not loaded");
             
             _startTime = Time.time;
-            // AudioSourceComponent.PlayDelayed(StartDelayTime);
+            //AudioSourceComponent.PlayDelayed(StartDelayTime); Gtau kenapa ini gabisa
             _isStarted = true;
         }
         
@@ -116,12 +112,10 @@ namespace Game.Session {
         
         // In Session Methods
         public void NoteHit(GameObject note, NoteHitType hitType) {
-            bool isDark = note.tag == "Dark";
             Destroy(note);
             
             if (hitType == NoteHitType.Miss) {
                 _sfxManager.PlayMiss();
-                SetBalanceScale(isDark);
                 _missCount++;
             } else if (hitType == NoteHitType.Good) {
                 _sfxManager.PlayHit();
@@ -136,28 +130,12 @@ namespace Game.Session {
             if (OnHit != null) OnHit(hitType);
         }
         
-        // Balance System
-        private void SetBalanceScale(bool isDark) {
-            bool isBalancedBefore = _balanceScale == 0;
-            _balanceScale += isDark ? 1 : -1;
-            
-            if (isBalancedBefore) _unbalancedStartTime = Time.time;
-            
-            if (OnBalanceScaleChange != null)
-                OnBalanceScaleChange(_balanceScale);
-        }
-        
         private void CheckBalanceScaleFail() {
             if (Time.time - _unbalancedStartTime > UnbalancedFailTime && _balanceScale != 0) {
                 EndSession(true);
             }
         }
         
-        private void CheckMissFail() {
-            if (5 * _missCount > _notes.Length) {
-                EndSession(true);
-            }
-        }
         
         // Getters
         public bool GetIsStarted() {

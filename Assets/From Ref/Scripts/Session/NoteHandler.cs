@@ -5,7 +5,7 @@ using UnityEngine;
 using Game.Session;
 
 namespace Game.Session {
-    public class NoteHandler : MonoBehaviour {
+    public class NoteHandler : MonoBehaviour, MouseInteractable {
         private SessionManager _sessionManager;
         private Note _noteObject;
         [SerializeField] private Transform _topPoint;
@@ -33,7 +33,7 @@ namespace Game.Session {
             if (!_isInitialized || !_sessionManager.GetIsStarted()) return;
             
             ChangePosition();
-            CheckForHit();
+  
             CheckForMiss();
         }
         
@@ -46,6 +46,7 @@ namespace Game.Session {
             transform.position = new Vector2(positionX, positionY);
         }
         
+        /*
         private void CheckForHit() {
             if (Input.GetKeyDown(SessionUtils.KeyIndexToKeyCode(_noteObject.Key))) {
                 if (_bottomPoint.position.y <= _sessionManager.Line.position.y
@@ -61,11 +62,31 @@ namespace Game.Session {
                     }
                 }
             }
-        }
+        }*/
         
         private void CheckForMiss() {
             if (_topPoint.position.y < _sessionManager.Line.position.y) {
                 _sessionManager.NoteHit(gameObject, NoteHitType.Miss);
+            }
+        }
+
+        public void interact()
+        {
+            if (_bottomPoint.position.y <= _sessionManager.Line.position.y
+                        && _sessionManager.Line.position.y <= _topPoint.position.y)
+            {
+                float height = _topPoint.position.y - _bottomPoint.position.y;
+                float midPoint = _bottomPoint.position.y + height / 2;
+
+                // Inner half of circle -> Perfect
+                if (4 * Mathf.Abs(midPoint - _sessionManager.Line.position.y) < height)
+                {
+                    _sessionManager.NoteHit(gameObject, NoteHitType.VeryGood);
+                }
+                else
+                {
+                    _sessionManager.NoteHit(gameObject, NoteHitType.Good);
+                }
             }
         }
     }
